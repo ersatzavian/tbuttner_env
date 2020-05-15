@@ -1,4 +1,3 @@
-
 # Source this file from c/Program\ Files/Git/etc/profile
 # Probably also change your git bash $HOME TO /c/Users/<user>
 
@@ -49,3 +48,13 @@ alias gc='git commit'
 # 4. Install Pathogen:
 # mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 # curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
+# Git branch in prompt. -------------------------------
+# https://medium.com/@thucnc/how-to-show-current-git-branch-with-colors-in-bash-prompt-380d05a24745
+
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+export PS1="\[\e[36m\]\u\[\e[m\]@\[\e[32m\]\h:\[\e[33;1m\]\w\[\e[36m\]\$(parse_git_branch)\[\e[00m\]$ "
+
