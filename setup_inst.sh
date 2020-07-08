@@ -2,7 +2,8 @@
 cp bash_profile ~/.bash_profile
 cp basic_vimrc ~/.vimrc
 
-cp -r peaksea/ ~/.vim/colors
-cp -r solarized/ ~/.vim/colors
+mkdir -p ~/.vim/colors/
+cp -r peaksea.vim ~/.vim/colors
+cp -r solarized.vim ~/.vim/colors
 
 "Setup Done!"
