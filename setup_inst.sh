@@ -1,7 +1,9 @@
 # Unpack rcs
 cp bash_profile ~/.bash_profile
 cp bash_aliases ~/.bash_aliases
-cp astranisrc ~/.astranisrc
+cp bashrc ~/.bashrc
 cp basic_vimrc ~/.vimrc
 
-"Open vim and :PluginInstall to complete."
+# unpack vim color schemes
+mkdir -p ~/.vim/colors
+cp *.vim ~/.vim
