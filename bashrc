@@ -89,7 +89,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-# colored GCC warnings and errors
+# colorized GCC warnings and errors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
@@ -110,10 +110,6 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-if [ -f ~/.astranisrc ]; then
-    . ~/.astranisrc
-fi
-
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -124,9 +120,3 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-# Added by build_setup.sh:
-export PATH=$PATH:/home/avionics/tools/bin
-# Added by build_setup.sh:
-export PATH=$PATH:/home/avionics/tools/bin
-# Added by build_setup.sh:
-export PATH=$PATH:/home/avionics/tools/arcanist/arcanist/bin
